@@ -4,9 +4,9 @@ import '../styles/Appbar.css'
 const Appbar = () => {
     return (
         <div className="appbar">
-            <h1>ERU</h1>
-            <h1> SHoez Storez</h1>
-            <span>cart</span>
+            <h2 className="logo">ERU</h2>
+            <h2 className="title"> SHoez Storez</h2>
+            <h2 className="cart"> cart</h2>
         </div>
     )
 }

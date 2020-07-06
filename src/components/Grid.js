@@ -1,30 +1,31 @@
 // GridLayout, JustifiedLayout, FrameLayout, SquareLayout, PackingLayout
-import {SquareLayout} from "@egjs/react-infinitegrid";
+import { GridLayout } from "@egjs/react-infinitegrid";
 
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import Shoe from './Shoe'
 
 const Item = ({
-  link,
-  width,
-  height,
-  title,
-  url,
-  channelLink,
-  channelTitle
+    link,
+    width,
+    height,
+    title,
+    url,
+    channelLink,
+    channelTitle
 }) => (
-  <div className="item">
-    <span className="image-container">
-        <img
-          data-width={width}
-          data-height={height}
-          src={url}
-          alt="thumbnail"
-        />
-      </span>
-  </div>
-);
+        <div className="item">
+            <span className="image-container">
+                <img
+                    data-width={width}
+                    data-height={height}
+                    src={url}
+                    alt="thumbnail"
+                />
+            </span>
+        </div>
+    );
 
+//  onAppend={e => setList(list.concat([<Shoe shoe={shoes[Math.floor(Math.random()*3)]}/>]))}
 
 
 const Grid = () => {
@@ -64,17 +65,24 @@ const Grid = () => {
         }
     ]
 
-    const [list, setList] = useState([<Shoe shoe={shoes[0]}/>, <Shoe shoe={shoes[1]}/>, <Shoe shoe={shoes[2]}/>])
+    const [list, setList] = useState([<Shoe shoe={shoes[0]} />, <Shoe shoe={shoes[1]} />, <Shoe shoe={shoes[2]} />])
 
     return (
-        <SquareLayout
+        <GridLayout
+            options={{
+                isConstantSize: true,
+            }}
+            layoutOptions={{
+                margin: 8,
+                align: "center"
+            }}
             tag="div"
             threshold={100}
             isOverflowScroll={false}
             isEqualSize={false}
             isConstantSize={false}
-            useFit={true}
-            useRecycle={true}
+            useFit={false}
+            useRecycle={false}
             horizontal={false}
             percentage={false}
             onAppend={e => setList(list.concat([<Shoe shoe={shoes[Math.floor(Math.random()*3)]}/>]))}
@@ -83,7 +91,7 @@ const Grid = () => {
             onImageError={e => "imageError"}
             onChange={e => "change"}>
             {list}
-        </SquareLayout>
+        </GridLayout>
     )
 }
 

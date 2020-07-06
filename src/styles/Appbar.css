@@ -1,6 +1,18 @@
 .appbar {
     display: flex;
-    justify-content: space-around;
-    background: aquamarine;
+    flex-direction: row;
+    justify-content: space-between;
+    background: rgb(241, 241, 240);
     width: auto;
+    margin-bottom: 1rem;
+    font-family: "Nike TG","Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: min-content;
+}
+
+.logo {
+    padding-left: 1rem;
+}
+
+.cart {
+    padding-right: 1rem;
 }
