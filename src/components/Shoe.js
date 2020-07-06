@@ -12,17 +12,22 @@ const Shoe = ({ shoe }) => {
         setHover(!hover)
     }
 
-    return (
-        <div className="shoe-container" >
-            {!hover &&
+    if (!hover) {
+        return (
+            <div className="shoe-container" >
                 <img src={shoe.img_main} alt={shoe.name} onMouseEnter={handleMouseMovement} />
-            }
-            {hover &&
-                <img src={shoe.img_side} alt={shoe.name} onMouseLeave={handleMouseMovement}/>
-            }
-            <span className="shoe-name">{shoe.name}</span>
-        </div>
-    )
+                <span className="shoe-name">{shoe.name}</span>
+            </div>
+        )
+    } else if (hover) {
+        return (
+            <div className="shoe-container" >
+                <img src={shoe.img_side} alt={shoe.name} onMouseLeave={handleMouseMovement} />
+                <span className="shoe-name">{shoe.name}</span>
+            </div>
+        )
+
+    }
 }
 
 export default Shoe
