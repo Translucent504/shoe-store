@@ -4,9 +4,35 @@ img {
     max-height: 100%;
 }
 
+
+ 
+ 
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 576px) {  
+    .shoe-container {
+        width: 90vw;
+    }
+ 
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media screen and (min-width: 768px) {  
+    .shoe-container {
+        width: 40vw;
+    }
+ 
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) { 
+    .shoe-container {
+        width: 30vw;
+    }
+ 
+}
+
 .shoe-container {
     padding: 0;
-    width: 31vw;
     text-align: center;
     display: flex;
     flex-direction: column;
