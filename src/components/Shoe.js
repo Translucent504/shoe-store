@@ -13,12 +13,12 @@ const Shoe = ({ shoe }) => {
     }
 
     return (
-        <div className="shoe-container" onMouseEnter={handleMouseMovement} onMouseLeave={handleMouseMovement}>
+        <div className="shoe-container" >
             {!hover &&
-                <img src={shoe.img_main} alt={shoe.name} />
+                <img src={shoe.img_main} alt={shoe.name} onMouseEnter={handleMouseMovement} />
             }
             {hover &&
-                <img src={shoe.img_side} alt={shoe.name} />
+                <img src={shoe.img_side} alt={shoe.name} onMouseLeave={handleMouseMovement}/>
             }
             <span className="shoe-name">{shoe.name}</span>
         </div>
