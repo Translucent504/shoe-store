@@ -1,3 +1,6 @@
+# Mockup:
+![](mockup.png)
+
 - ## Inspirations:
     - [Nike](https://www.nike.com/launch)
     - [Adidas](https://www.adidas.com/us/men-shoes)
