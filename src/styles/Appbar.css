@@ -1,0 +1,6 @@
+.appbar {
+    display: flex;
+    justify-content: space-around;
+    background: aquamarine;
+    width: auto;
+}

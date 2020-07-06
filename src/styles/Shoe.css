@@ -1,0 +1,13 @@
+img {
+    width: 30vw;
+}
+img{
+    cursor: pointer;
+}
+
+
+.pic {
+    background-color: black;
+    height: 30vh;
+    width: 30vw;
+}
