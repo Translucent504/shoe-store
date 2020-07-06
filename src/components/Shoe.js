@@ -18,7 +18,7 @@ const Shoe = ({ shoe }) => {
                 <img src={shoe.img_main} alt={shoe.name} />
             }
             {hover &&
-                <img src={shoe.imgs_side} alt={shoe.name} />
+                <img src={shoe.img_side} alt={shoe.name} />
             }
             <span className="shoe-name">{shoe.name}</span>
         </div>
