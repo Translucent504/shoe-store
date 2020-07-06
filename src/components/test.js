@@ -1,47 +1,22 @@
-import React, { Component } from "react";
-import { render } from "react-dom";
+import React from 'react';
+import Modali, { useModali } from 'modali';
 
-class HoverExample extends Component {
-  constructor(props) {
-    super(props);
-    this.handleMouseHover = this.handleMouseHover.bind(this);
-    this.state = {
-      isHovering: false
-    };
-  }
+const [completeModal, toggleCompleteModal] = useModali({
+  animated: true,
+  title: 'Are you sure?',
+  message: 'Deleting this user will be permanent.',
+  buttons: [
+    <Modali.Button
+      label="Cancel"
+      isStyleCancel
+      onClick={() => console.log("CANSELLLLLLLLLLL")}
+    />,
+    <Modali.Button
+      label="Delete"
+      isStyleDestructive
+      onClick={() => console.log("DELETED")}
+    />,
+  ],
+});
 
-  handleMouseHover() {
-    this.setState(this.toggleHoverState);
-  }
-
-  toggleHoverState(state) {
-    return {
-      isHovering: !state.isHovering
-    };
-  }
-
-  render() {
-    return (
-      <div>
-        {!this.state.isHovering && (
-          <div
-            onMouseEnter={this.handleMouseHover}
-            onMouseLeave={this.handleMouseHover}
-          >
-            Hover Me
-          </div>
-        )}
-        {this.state.isHovering && (
-          <div
-            onMouseEnter={this.handleMouseHover}
-            onMouseLeave={this.handleMouseHover}
-          >
-            Hovering right meow!
-          </div>
-        )}
-      </div>
-    );
-  }
-}
-
-render(<HoverExample />, document.getElementById("root"));
+export default toggleCompleteModal

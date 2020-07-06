@@ -39,7 +39,7 @@ import voltblack_side from '../images/volt-black_side.jpg'
 
 
 
-const Grid = () => {
+const Grid = ({ openModal }) => {
 
     const shoes = [
         {
@@ -129,7 +129,7 @@ const Grid = () => {
         },
     ]
 
-    const [list, setList] = useState([<Shoe shoe={shoes[0]} />, <Shoe shoe={shoes[1]} />, <Shoe shoe={shoes[2]} />])
+    const [list, setList] = useState([<Shoe shoe={shoes[0]} openModal={openModal}/>, <Shoe shoe={shoes[1]} openModal={openModal}/>, <Shoe shoe={shoes[2]} openModal={openModal}/>])
 
     return (
         <GridLayout
@@ -138,12 +138,12 @@ const Grid = () => {
                 isEqualSize: true,
             }}
             layoutOptions={{
-                margin: 8,
-                align: "center"
+                margin: 14,
+                align: "center",
             }}
             tag="div"
             threshold={100}
-            onAppend={e => setList(list.concat([<Shoe shoe={list.length>=shoes.length ? shoes[Math.floor(Math.random() * shoes.length)] :shoes[list.length]} />]))}
+            onAppend={e => setList(list.concat([<Shoe openModal={openModal} shoe={list.length>=shoes.length ? shoes[Math.floor(Math.random() * shoes.length)] :shoes[list.length]} />]))}
             onPrepend={e => "append"}
             onLayoutComplete={e => "layoutComplete"}
             onImageError={e => "imageError"}

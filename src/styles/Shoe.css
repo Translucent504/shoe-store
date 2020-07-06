@@ -3,9 +3,6 @@ img {
     max-width: 100%;
     max-height: 100%;
 }
-
-
- 
  
 /* Small devices (landscape phones, 576px and up) */
 @media screen and (min-width: 576px) {  
@@ -30,18 +27,20 @@ img {
     }
  
 }
+.shoe-container.hover {
+    border-style: dashed;
+    border-color: black;
+}
 
 .shoe-container {
     padding: 0;
     text-align: center;
     display: flex;
     flex-direction: column;
-    border: steelblue;
-    border-style: none;
 }
 
 .shoe-name {
-    padding: 1rem 0 3rem 0;
+    padding: 0;
     font-family: "Nike TG","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: bolder;
     letter-spacing: 0.5rem;
