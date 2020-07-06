@@ -143,7 +143,7 @@ const Grid = () => {
             }}
             tag="div"
             threshold={100}
-            onAppend={e => setList(list.concat([<Shoe shoe={shoes[list.length]} />]))}
+            onAppend={e => setList(list.concat([<Shoe shoe={list.length>=shoes.length ? shoes[Math.floor(Math.random() * shoes.length)] :shoes[list.length]} />]))}
             onPrepend={e => "append"}
             onLayoutComplete={e => "layoutComplete"}
             onImageError={e => "imageError"}
