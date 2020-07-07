@@ -129,7 +129,7 @@ const Grid = ({ openModal }) => {
         },
     ]
 
-    const [list, setList] = useState([<Shoe shoe={shoes[0]} openModal={openModal}/>, <Shoe shoe={shoes[1]} openModal={openModal}/>, <Shoe shoe={shoes[2]} openModal={openModal}/>])
+    const [list, setList] = useState([<Shoe shoe={shoes[0]} />, <Shoe shoe={shoes[1]} />, <Shoe shoe={shoes[2]} />])
 
     return (
         <GridLayout
