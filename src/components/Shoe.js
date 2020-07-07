@@ -10,6 +10,7 @@ const Shoe = ({ shoe }) => {
     const [completeModal, toggleCompleteModal] = useModali({
         large: true,
         animated: true,
+        closeButton: false
     });
     const handleMouseMovement = () => {
         setHover(!hover)
@@ -22,7 +23,7 @@ const Shoe = ({ shoe }) => {
             {
                 !hover
                     ?
-                    <div className="shoe-container nothover" >
+                    <div className="shoe-container nothover" onClick={toggleCompleteModal}>
                         <img src={shoe.img_main} alt={shoe.name} onMouseEnter={handleMouseMovement} />
                         <span className="shoe-name">{shoe.name}</span>
                     </div>
