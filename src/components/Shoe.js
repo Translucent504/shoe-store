@@ -18,7 +18,7 @@ const Shoe = ({ shoe }) => {
     return (
         <>
             <Modali.Modal {...completeModal}>
-                <ShoeDetails shoe={shoe} />
+                <ShoeDetails shoe={shoe} toggle={()=>toggleCompleteModal()}/>
             </Modali.Modal>
             {
                 !hover

@@ -4,6 +4,7 @@
     grid-template-columns: 50% 50%;
 }
 
+
 /* class applies to select element itself, not a wrapper element */
 .size {
     display: block;

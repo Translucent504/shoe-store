@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/ShoeDetails.css'
 
-const ShoeDetails = ({ shoe }) => {
+const ShoeDetails = ({ shoe, toggle }) => {
     return (
         <div className="grid-container">
             <img src={shoe.img_main} alt={shoe.name} />
@@ -17,7 +17,7 @@ const ShoeDetails = ({ shoe }) => {
                     </select>
                     <input type="number" name="qty" id="qty" placeholder="Qty" />
                 </div>
-                <button className="add-to-cart">Add to Cart</button>
+                <button className="add-to-cart" onClick={toggle}>Add to Cart</button>
             </section>
         </div>
     )
