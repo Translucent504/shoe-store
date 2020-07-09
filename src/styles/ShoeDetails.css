@@ -65,11 +65,13 @@
 
 .add-to-cart {
     margin-bottom: auto;
+    margin-top: 1rem;
+    height: 20%;
 }
 
 .shoe-details {
     display:flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
 }
 
