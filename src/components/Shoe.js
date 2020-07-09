@@ -21,26 +21,25 @@ const Shoe = ({ shoe }) => {
             <Modali.Modal {...completeModal}>
                 <ShoeDetails shoe={shoe} toggle={() => toggleCompleteModal()} />
             </Modali.Modal>
-            {
-                !hover
-                    ?
-                    <div className="shoe-container nothover" onClick={toggleCompleteModal}>
-                        <picture>
-                            <source srcset={shoe.img_main} type="image/webp"  />
-                            <source srcset={shoe.jpeg_img_main} type="image/jpeg"  />
-                            <img src={shoe.jpeg_img_main} alt={shoe.name} onMouseEnter={handleMouseMovement} />
-                        </picture>
-                        <span className="shoe-name">{shoe.name}</span>
-                    </div>
-                    :
-                    <div className="shoe-container hover" onClick={toggleCompleteModal}>
-                        <picture>
-                            <source srcset={shoe.img_side} type="image/webp" />
-                            <source srcset={shoe.jpeg_img_side} type="image/jpeg" />
-                            <img src={shoe.jpeg_img_side} alt={shoe.name} onMouseLeave={handleMouseMovement} />
-                        </picture>
-                        <span className="shoe-name">{shoe.name}</span>
-                    </div>
+            {!hover
+                ?
+                <div className="shoe-container nothover" onClick={toggleCompleteModal}>
+                    <picture>
+                        <source srcset={shoe.img_main} type="image/webp" />
+                        <source srcset={shoe.jpeg_img_main} type="image/jpeg" />
+                        <img src={shoe.jpeg_img_main} alt={shoe.name} onMouseEnter={handleMouseMovement} />
+                    </picture>
+                    <span className="shoe-name">{shoe.name}</span>
+                </div>
+                :
+                <div className="shoe-container hover" onClick={toggleCompleteModal}>
+                    <picture>
+                        <source srcset={shoe.img_side} type="image/webp" />
+                        <source srcset={shoe.jpeg_img_side} type="image/jpeg" />
+                        <img src={shoe.jpeg_img_side} alt={shoe.name} onMouseLeave={handleMouseMovement} />
+                    </picture>
+                    <span className="shoe-name">{shoe.name}</span>
+                </div>
             }
         </>
     )
