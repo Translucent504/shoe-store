@@ -1,5 +1,5 @@
 // GridLayout, JustifiedLayout, FrameLayout, SquareLayout, PackingLayout
-import { GridLayout } from "@egjs/react-infinitegrid";
+import {SquareLayout } from "@egjs/react-infinitegrid";
 import React, { useState } from 'react'
 import Shoe from './Shoe'
 import airmax_main from '../images/air-max_main.jpg'
@@ -132,14 +132,15 @@ const Grid = () => {
     const [list, setList] = useState([])
 
     return (
-        <GridLayout
+        <SquareLayout
             options={{
                 isConstantSize: true,
                 isEqualSize: true,
             }}
             layoutOptions={{
                 margin: 14,
-                align: "center",
+                align:"justify"
+        
             }}
             tag="div"
             threshold={100}
@@ -149,7 +150,7 @@ const Grid = () => {
             onImageError={e => "imageError"}
             onChange={e => "change"}>
             {list}
-        </GridLayout>
+        </SquareLayout>
     )
 }
 

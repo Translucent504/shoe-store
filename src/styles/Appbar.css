@@ -1,14 +1,18 @@
 .appbar {
+    text-transform: uppercase;
+    border-bottom: groove black;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background: rgb(241, 241, 240);
     width: auto;
     margin-bottom: 1rem;
     font-family: "Nike TG","Helvetica Neue",Helvetica,Arial,sans-serif;
     height: min-content;
 }
-
+h2 {
+    margin: 0.5rem 0 0 0;
+    color:black;
+}
 .logo {
     padding-left: 1rem;
 }

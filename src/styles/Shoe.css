@@ -33,6 +33,7 @@ img {
 }
 
 .shoe-container {
+    position: relative;
     padding: 0;
     text-align: center;
     display: flex;
@@ -40,11 +41,14 @@ img {
 }
 
 .shoe-name {
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    font-weight: 550;
     padding: 0;
-    font-family: "Nike TG","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: bolder;
-    letter-spacing: 0.5rem;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.3rem;
     text-transform: uppercase;
-    font-size: 32px;
+    font-size: 3vw;
     line-height: 1.714285714285714;
 }
