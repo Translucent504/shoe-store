@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, lazy } from 'react'
 import Modali, { useModali } from 'modali';
 import ShoeDetails from './ShoeDetails'
+import ShoeNotHover from './ShoeNotHover'
 import '../styles/Shoe.css'
 const Shoe = ({ shoe }) => {
     // This component should manage its UI state based on
@@ -18,7 +19,7 @@ const Shoe = ({ shoe }) => {
     return (
         <>
             <Modali.Modal {...completeModal}>
-                <ShoeDetails shoe={shoe} toggle={()=>toggleCompleteModal()}/>
+                <ShoeDetails shoe={shoe} toggle={() => toggleCompleteModal()} />
             </Modali.Modal>
             {
                 !hover
@@ -29,7 +30,7 @@ const Shoe = ({ shoe }) => {
                     </div>
                     :
                     <div className="shoe-container hover" onClick={toggleCompleteModal}>
-                        {<img src={shoe.img_side} alt={shoe.name} onMouseLeave={handleMouseMovement} />}
+                        <img src={shoe.img_side} alt={shoe.name} onMouseLeave={handleMouseMovement} />
                         <span className="shoe-name">{shoe.name}</span>
                     </div>
             }
