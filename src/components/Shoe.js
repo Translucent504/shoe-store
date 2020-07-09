@@ -1,7 +1,7 @@
-import React, { useState, lazy } from 'react'
+import React, { useState} from 'react'
 import Modali, { useModali } from 'modali';
 import ShoeDetails from './ShoeDetails'
-import ShoeNotHover from './ShoeNotHover'
+
 import '../styles/Shoe.css'
 const Shoe = ({ shoe }) => {
     // This component should manage its UI state based on
