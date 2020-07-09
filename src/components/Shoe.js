@@ -1,4 +1,4 @@
-import React, { useState} from 'react'
+import React, { useState } from 'react'
 import Modali, { useModali } from 'modali';
 import ShoeDetails from './ShoeDetails'
 
@@ -25,12 +25,20 @@ const Shoe = ({ shoe }) => {
                 !hover
                     ?
                     <div className="shoe-container nothover" onClick={toggleCompleteModal}>
-                        <img src={shoe.img_main} alt={shoe.name} onMouseEnter={handleMouseMovement} />
+                        <picture>
+                            <source srcset={shoe.img_main} type="image/webp"  />
+                            <source srcset={shoe.jpeg_img_main} type="image/jpeg"  />
+                            <img src={shoe.jpeg_img_main} alt={shoe.name} onMouseEnter={handleMouseMovement} />
+                        </picture>
                         <span className="shoe-name">{shoe.name}</span>
                     </div>
                     :
                     <div className="shoe-container hover" onClick={toggleCompleteModal}>
-                        <img src={shoe.img_side} alt={shoe.name} onMouseLeave={handleMouseMovement} />
+                        <picture>
+                            <source srcset={shoe.img_side} type="image/webp" />
+                            <source srcset={shoe.jpeg_img_side} type="image/jpeg" />
+                            <img src={shoe.jpeg_img_side} alt={shoe.name} onMouseLeave={handleMouseMovement} />
+                        </picture>
                         <span className="shoe-name">{shoe.name}</span>
                     </div>
             }

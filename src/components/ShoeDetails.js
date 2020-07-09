@@ -6,8 +6,10 @@ const ShoeDetails = ({ shoe, toggle }) => {
         <div className="grid-container">
             <img src={shoe.img_main} alt={shoe.name} />
             <section className="shoe-details">
-                <h1>{shoe.name}</h1>
-                <sub>130$</sub>
+                <div className="header-price">
+                    <h1>{shoe.name}</h1>
+                    <span>130$</span>
+                </div>
                 <div className="selectors">
                     <select className="size" id="size">
                         <option value="" disabled selected hidden>Select Size</option>

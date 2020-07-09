@@ -98,3 +98,11 @@ render(<HoverExample />, document.getElementById("root"));
   - Object placement along the main flexbox direction is done by first setting everything with `justify-contents:flex-end` etc and then using `margin: auto` and its variants like `margin-left: auto` on the children for specific placement. Object placement along the cross axis inside flexbox is done by using `align-self: auto`. There is an [Amazing demonstration of flexbox alignment on SO](https://stackoverflow.com/questions/32551291/in-css-flexbox-why-are-there-no-justify-items-and-justify-self-properties/33856609#33856609)
 
   - The hover whitening effect on images is added by simply changing the `opacity: 0.6` or something and then making it look smooth by adding a `transition: 0.5s ease`
+
+  - Negative margins allow you to make items overlap. We used this in the Shoe-details modal to make the price get close to the heading name of the shoe by setting `margin-bottom: -1rem;` for the header.
+
+  - To enable fallbacks with next-gen image formats like webP we use `<picture>` elements with multiple `<source>` elements. However this will not render unless there is also an included `<img>` element inside it with a basic src like jpeg etc. This sort of enforces backwards compatibility by simply not allowing us to use picture without an img element since some browsers may not support picture.
+
+## TODO Maybe
+
+- Animate the gender stick figures.
