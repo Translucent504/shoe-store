@@ -112,3 +112,4 @@ render(<HoverExample />, document.getElementById("root"));
 ## TODO Maybe
 
 - Animate the gender stick figures.
+- Implement Cart sidebar
