@@ -1,10 +1,10 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import '../styles/ShoeDetails.css'
 
 const ShoeDetails = ({ shoe, toggle, handleCart }) => {
     const [qty, setQty] = useState(0)
     const handleAddToCart = () => {
-        if (qty > 0){
+        if (qty > 0) {
             handleCart(shoe, qty)
             setQty(0)
         }
@@ -18,6 +18,10 @@ const ShoeDetails = ({ shoe, toggle, handleCart }) => {
                     <h1>{shoe.name}</h1>
                     <span>130$</span>
                 </div>
+                <div className="cart-buttons">
+                    <button onClick={() => setQty(qty + 1 < 0 ? 0 : qty + 1)}>+</button>
+                    <button onClick={() => setQty(qty - 1 < 0 ? 0 : qty - 1)}>-</button>
+                </div>
                 <div className="selectors">
                     <select defaultValue="select size" className="size" id="size">
                         <option value="select size" disabled hidden>Select Size</option>
@@ -25,7 +29,7 @@ const ShoeDetails = ({ shoe, toggle, handleCart }) => {
                         <option value="2">47</option>
                         <option value="3">50</option>
                     </select>
-                    <input type="number" name="qty" id="qty" placeholder="Qty" value={qty} onChange={e => setQty(e.target.value)}/>
+                    <input type="number" name="qty" id="qty" placeholder="Qty" value={qty} onChange={e => setQty(e.target.value < 0 ? 0 : e.target.value)} />
                 </div>
                 <button className="add-to-cart" onClick={handleAddToCart}>Add to Cart</button>
             </section>
