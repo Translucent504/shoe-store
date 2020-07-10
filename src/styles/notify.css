@@ -1,0 +1,16 @@
+.notify-container {
+    display:flex;
+    flex-direction: row;
+}
+
+.notify-container span {
+    font-size: 5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:auto ;
+    font-weight: bold;
+    color:rgba(41, 40, 40, 0.931)
+}
+
+.notify-container img {
+    width: 50%;
+}
