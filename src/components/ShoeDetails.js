@@ -1,7 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
 import '../styles/ShoeDetails.css'
 
-const ShoeDetails = ({ shoe, toggle }) => {
+const ShoeDetails = ({ shoe, toggle, handleCart }) => {
+    const [qty, setQty] = useState(0)
+    const handleAddToCart = () => {
+        if (qty > 0){
+            handleCart(shoe, qty)
+            setQty(0)
+        }
+        toggle()
+    }
     return (
         <div className="grid-container">
             <img src={shoe.img_main} alt={shoe.name} />
@@ -11,15 +19,15 @@ const ShoeDetails = ({ shoe, toggle }) => {
                     <span>130$</span>
                 </div>
                 <div className="selectors">
-                    <select className="size" id="size">
-                        <option value="" disabled selected hidden>Select Size</option>
+                    <select defaultValue="select size" className="size" id="size">
+                        <option value="select size" disabled hidden>Select Size</option>
                         <option value="1">32</option>
                         <option value="2">47</option>
                         <option value="3">50</option>
                     </select>
-                    <input type="number" name="qty" id="qty" placeholder="Qty" />
+                    <input type="number" name="qty" id="qty" placeholder="Qty" value={qty} onChange={e => setQty(e.target.value)}/>
                 </div>
-                <button className="add-to-cart" onClick={toggle}>Add to Cart</button>
+                <button className="add-to-cart" onClick={handleAddToCart}>Add to Cart</button>
             </section>
         </div>
     )
