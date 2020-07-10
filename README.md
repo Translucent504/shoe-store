@@ -103,6 +103,12 @@ render(<HoverExample />, document.getElementById("root"));
 
   - To enable fallbacks with next-gen image formats like webP we use `<picture>` elements with multiple `<source>` elements. However this will not render unless there is also an included `<img>` element inside it with a basic src like jpeg etc. This sort of enforces backwards compatibility by simply not allowing us to use picture without an img element since some browsers may not support picture.
 
+- ## Debugging / quirks
+
+  - React Strict Mode causes component double rendering when using hooks.
+
+  - DO NOT PUT COMPONENTS INSIDE STATE. I put a list of components to be rendered by the grid into a list and they had messed up closures. Basically whatever the closure was at the time of adding them to state was what they kept regardless of the state that they depended on changing. This was a problem with the Shoe item inside the grid and when I pressed the add to cart button it always resetted app state to what it was when the Shoe component was added to the list state.
+
 ## TODO Maybe
 
 - Animate the gender stick figures.
