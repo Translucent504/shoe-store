@@ -7,7 +7,7 @@ const CartSidebar = ({cart, handleCart}) => {
         <div>
         <h1>Cart Items</h1>
         <ul>
-            {unique.map(c => <CartItem item={c} cart={cart} handleCart={handleCart}/>)}
+            {unique.map(c => <CartItem key={c} item={c} cart={cart} handleCart={handleCart}/>)}
         </ul>
         </div>
     )

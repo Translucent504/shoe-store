@@ -17,7 +17,6 @@ const Grid = ({ cart, handleCart }) => {
 
     return (
         <div>
-            {console.log(`above square ${cart}`)}
             <SquareLayout
                 options={{
                     isConstantSize: true,
@@ -30,15 +29,12 @@ const Grid = ({ cart, handleCart }) => {
                 }}
                 tag="div"
                 threshold={100}
-                onAppend={handleAppend}
-                onPrepend={e => console.log("prepend")}
-                onLayoutComplete={e => console.log("layoutComplete")}
-                onImageError={e => console.log("imageError")}
-                onChange={e => console.log("change")}>
+                onAppend={handleAppend}>
 
-                {list.map(idx => <Shoe
+                {list.map((idx, i) => <Shoe
                         handleCart={handleCart}
-                        shoe={shoes[idx]} />)}
+                        shoe={shoes[idx]}
+                        key={i.toString() + shoes[idx].name} />)}
             </SquareLayout>
         </div>
     )

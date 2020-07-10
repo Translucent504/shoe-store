@@ -25,8 +25,8 @@ const Shoe = ({shoe, handleCart }) => {
                 ?
                 <div className="shoe-container nothover" onClick={toggleCompleteModal} onMouseEnter={handleMouseMovement}>
                     <picture>
-                        <source srcset={shoe.img_main} type="image/webp" />
-                        <source srcset={shoe.jpeg_img_main} type="image/jpeg" />
+                        <source srcSet={shoe.img_main} type="image/webp" />
+                        <source srcSet={shoe.jpeg_img_main} type="image/jpeg" />
                         <img src={shoe.jpeg_img_main} alt={shoe.name}  />
                     </picture>
                     <span className="shoe-name">{shoe.name}</span>
@@ -34,8 +34,8 @@ const Shoe = ({shoe, handleCart }) => {
                 :
                 <div className="shoe-container hover" onClick={toggleCompleteModal} onMouseLeave={handleMouseMovement}>
                     <picture>
-                        <source srcset={shoe.img_side} type="image/webp" />
-                        <source srcset={shoe.jpeg_img_side} type="image/jpeg" />
+                        <source srcSet={shoe.img_side} type="image/webp" />
+                        <source srcSet={shoe.jpeg_img_side} type="image/jpeg" />
                         <img src={shoe.jpeg_img_side} alt={shoe.name}  />
                     </picture>
                     <span className="shoe-name">{shoe.name}</span>
