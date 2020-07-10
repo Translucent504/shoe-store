@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import '../styles/ShoeDetails.css'
 
-const ShoeDetails = ({ shoe, toggle, handleCart }) => {
-    const [qty, setQty] = useState(0)
+const ShoeDetails = ({ shoe, toggle, handleCart, notify }) => {
+    const [qty, setQty] = useState(1)
     const handleAddToCart = () => {
         if (qty > 0) {
+            notify(shoe, qty)
             handleCart(shoe, qty)
-            setQty(0)
+            setQty(1)
         }
         toggle()
     }

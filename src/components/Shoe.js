@@ -3,7 +3,7 @@ import Modali, { useModali } from 'modali';
 import ShoeDetails from './ShoeDetails'
 
 import '../styles/Shoe.css'
-const Shoe = ({shoe, handleCart }) => {
+const Shoe = ({shoe, handleCart, notify }) => {
     // This component should manage its UI state based on
     // mouse entered and mouse left... if mouse is inside then render
     // one version else render the other....
@@ -19,7 +19,7 @@ const Shoe = ({shoe, handleCart }) => {
     return (
         <>
             <Modali.Modal {...completeModal}>
-                <ShoeDetails shoe={shoe} toggle={() => toggleCompleteModal()} handleCart={handleCart}/>
+                <ShoeDetails notify={notify} shoe={shoe} toggle={() => toggleCompleteModal()} handleCart={handleCart}/>
             </Modali.Modal>
             {!hover
                 ?

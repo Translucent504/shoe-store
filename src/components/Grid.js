@@ -4,8 +4,8 @@ import React, { useState } from 'react'
 import Shoe from './Shoe'
 import shoes from '../utils/ImageBunch'
 
-const Grid = ({ cart, handleCart }) => {
-    const [list, setList] = useState([])
+const Grid = ({ notify, handleCart }) => {
+    const [list, setList] = useState([0,1,2])
 
     const handleAppend = (e) => {
         setList(list.concat([
@@ -24,7 +24,7 @@ const Grid = ({ cart, handleCart }) => {
                 }}
                 layoutOptions={{
                     margin: 14,
-                    align: "justify"
+                    align: "center"
 
                 }}
                 tag="div"
@@ -32,6 +32,7 @@ const Grid = ({ cart, handleCart }) => {
                 onAppend={handleAppend}>
 
                 {list.map((idx, i) => <Shoe
+                        notify={notify}
                         handleCart={handleCart}
                         shoe={shoes[idx]}
                         key={i.toString() + shoes[idx].name} />)}
