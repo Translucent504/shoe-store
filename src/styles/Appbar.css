@@ -11,7 +11,10 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-family: "Nike TG","Helvetica Neue",Helvetica,Arial,sans-serif;
-    height: 4rem;
+    height: 6vh;
+    top: 0;
+    position: sticky;
+    z-index: 1;
 }
 h2 {
     color:black;
@@ -41,6 +44,15 @@ h2 {
 .cart {
     padding-right: 1rem;
 }
-img.cart {
+img.cart {    
     max-height: 100%;
+    cursor: pointer;
+    transition: transform 0.5s;
+    opacity: 0.6;
 }
+
+img.cart:hover {
+    opacity:0.5;
+    transform:scale(1.1);
+}
+

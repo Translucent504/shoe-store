@@ -15,6 +15,7 @@ const Msg = ({ closeToast, shoe, qty }) => (
 )
 
 function App() {
+  const [showCart, setShowCart] = useState(false)
   const [cart, setCart] = useState([
     "CHILL", "CHILL"
   ])
@@ -46,11 +47,16 @@ function App() {
     }
   }
 
+  const handleShowCart = () => {
+    setShowCart(!showCart)
+    console.log("show cart filled")
+  }
+
   return (
     <div>
-      <Appbar />
+      <Appbar showCart={showCart} handleShowCart={handleShowCart} />
       <ToastContainer />
-      <CartSidebar cart={cart} handleCart={handleCart} />
+      <CartSidebar handleShowCart={handleShowCart} showCart={showCart} cart={cart} handleCart={handleCart} />
       <Grid notify={notifyCart} cart={cart} handleCart={handleCart} />
     </div>
   );
