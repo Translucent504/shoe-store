@@ -2,10 +2,20 @@
 import { SquareLayout } from "@egjs/react-infinitegrid";
 import React, { useState } from 'react'
 import Shoe from './Shoe'
-import shoes from '../utils/ImageBunch'
+import all_shoes from '../utils/ImageBunch'
 
-const Grid = ({ notify, handleCart }) => {
-    const [list, setList] = useState([0,1,2])
+const Grid = ({ gender, notify, handleCart }) => {
+    const [list, setList] = useState([0, 1, 2])
+    let shoes = all_shoes
+
+    if (gender !== 'a') {
+        shoes = all_shoes.filter(s => s.gender === gender)
+        if (Math.max(...list) >= shoes.length) {
+            setList([0,1,2])
+            return
+        }
+    }
+
 
     const handleAppend = (e) => {
         setList(list.concat([
@@ -32,13 +42,14 @@ const Grid = ({ notify, handleCart }) => {
                 onAppend={handleAppend}>
 
                 {list.map((idx, i) => <Shoe
-                        notify={notify}
-                        handleCart={handleCart}
-                        shoe={shoes[idx]}
-                        key={i.toString() + shoes[idx].name} />)}
+                    notify={notify}
+                    handleCart={handleCart}
+                    shoe={shoes[idx]}
+                    key={i.toString() + shoes[idx].name} />)}
             </SquareLayout>
         </div>
     )
+
 }
 
 export default Grid

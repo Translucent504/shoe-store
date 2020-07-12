@@ -17,15 +17,18 @@ h2 {
     color:black;
     font-size: 2vw;
 }
-
+.img-male{
+    margin-left: 1rem;
+}
 .genders img{
     height: 10vh;
     transition: .5s ease;
-    margin-left: 1rem;
     max-height: 100%;
+    cursor: pointer;
 }
 .genders img:hover {
     opacity: 0.6;
+    transform: scale(1.3)
 }
 .logo {
     padding-left: 1rem;

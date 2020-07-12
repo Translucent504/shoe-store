@@ -72,6 +72,8 @@ import voltblack_side from '../images/volt-black_side.webp'
 export default [
     {
         name: "CHILL",
+        gender: 'm',
+        price: 130,
         img_main: chill_main,
         img_side: chill_side,
         jpeg_img_main: jpeg_chill_main,
@@ -79,6 +81,8 @@ export default [
     },
     {
         name: "AIR MAX",
+        gender: 'f',
+        price: 225,
         img_main: airmax_main,
         img_side: airmax_side,
         jpeg_img_main: jpeg_airmax_main,
@@ -86,6 +90,8 @@ export default [
     },
     {
         name: "ANIMAL INSTINCT",
+        gender: 'm',
+        price: 300,
         img_main: animal_main,
         img_side: animal_side,
         jpeg_img_main: jpeg_animal_main,
@@ -93,6 +99,8 @@ export default [
     },
     {
         name: "ANTHRACITE",
+        gender: 'm',
+        price: 599,
         img_main: anthracite_main,
         img_side: anthracite_side,
         jpeg_img_main: jpeg_anthracite_main,
@@ -100,6 +108,8 @@ export default [
     },
     {
         name: "BARELY VOLT",
+        gender: 'f',
+        price: 99,
         img_main: barelyvolt_main,
         img_side: barelyvolt_side,
         jpeg_img_main: jpeg_barelyvolt_main,
@@ -107,6 +117,8 @@ export default [
     },
     {
         name: "DUCK CAMO",
+        gender: 'f',
+        price: 335,
         img_main: duckcamo_main,
         img_side: duckcamo_side,
         jpeg_img_main: jpeg_duckcamo_main,
@@ -114,6 +126,8 @@ export default [
     },
     {
         name: "GRAFFITI",
+        gender: 'm',
+        price: 999,
         img_main: graffiti_main,
         img_side: graffiti_side,
         jpeg_img_main: jpeg_graffiti_main,
@@ -121,6 +135,8 @@ export default [
     },
     {
         name: "HOME AWAY",
+        gender: 'm',
+        price: 130,
         img_main: homeaway_main,
         img_side: homeaway_side,
         jpeg_img_main: jpeg_homeaway_main,
@@ -128,6 +144,8 @@ export default [
     },
     {
         name: "HYPE",
+        gender: 'm',
+        price: 250,
         img_main: hype_main,
         img_side: hype_side,
         jpeg_img_main: jpeg_hype_main,
@@ -135,6 +153,8 @@ export default [
     },
     {
         name: "MIDNIGHT NAVY",
+        gender: 'f',
+        price: 130,
         img_main: midnightnavy_main,
         img_side: midnightnavy_side,
         jpeg_img_main: jpeg_midnightnavy_main,
@@ -142,6 +162,8 @@ export default [
     },
     {
         name: "MVP",
+        gender: 'f',
+        price: 330,
         img_main: mvp_main,
         img_side: mvp_side,
         jpeg_img_main: jpeg_mvp_main,
@@ -149,6 +171,8 @@ export default [
     },
     {
         name: "N7",
+        gender: 'f',
+        price: 230,
         img_main: n7_main,
         img_side: n7_side,
         jpeg_img_main: jpeg_n7_main,
@@ -156,6 +180,8 @@ export default [
     },
     {
         name: "PALE IVORY",
+        gender: 'f',
+        price: 550,
         img_main: paleivory_main,
         img_side: paleivory_side,
         jpeg_img_main: jpeg_paleivory_main,
@@ -163,6 +189,8 @@ export default [
     },
     {
         name: "PCG",
+        gender: 'm',
+        price: 99,
         img_main: pcg_main,
         img_side: pcg_side,
         jpeg_img_main: jpeg_pcg_main,
@@ -170,6 +198,8 @@ export default [
     },
     {
         name: "TEAL TINT",
+        gender: 'm',
+        price: 669,
         img_main: tealtint_main,
         img_side: tealtint_side,
         jpeg_img_main: jpeg_tealtint_main,
@@ -177,6 +207,8 @@ export default [
     },
     {
         name: " TIE DYE",
+        gender: 'f',
+        price: 777,
         img_main: tiedye_main,
         img_side: tiedye_side,
         jpeg_img_main: jpeg_tiedye_main,
@@ -184,6 +216,8 @@ export default [
     },
     {
         name: "VOLT BLACK",
+        gender: 'm',
+        price: 380,
         img_main: voltblack_main,
         img_side: voltblack_side,
         jpeg_img_main: jpeg_voltblack_main,
