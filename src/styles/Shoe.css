@@ -42,6 +42,12 @@
     
 }
 
+.shoe-gender {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+}
+
 .shoe-name {
     position: absolute;
     top: 0.5rem;

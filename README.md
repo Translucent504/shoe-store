@@ -146,6 +146,8 @@ render(<HoverExample />, document.getElementById("root"));
 ## TODO Maybe
 
 - [ ] Animate the gender stick figures.
+- [ ] Add gender icons to main shoe image on grid.(maybe top right of image, position:absolute)
 - [x] Implement Cart sidebar
+- [ ] Compute and show Total in cart sidebar
 - [x] Implement Gender Filtering
 - [ ] Add the dota shop sound on cart sidebar.

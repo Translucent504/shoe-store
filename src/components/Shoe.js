@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import Modali, { useModali } from 'modali';
 import ShoeDetails from './ShoeDetails'
-
 import '../styles/Shoe.css'
+import tmale from '../images/tmale.png'
+import tfemale from '../images/tfemale.png'
+
 const Shoe = ({shoe, handleCart, notify }) => {
     // This component should manage its UI state based on
     // mouse entered and mouse left... if mouse is inside then render
@@ -30,6 +32,7 @@ const Shoe = ({shoe, handleCart, notify }) => {
                         <img src={shoe.jpeg_img_main} alt={shoe.name}  />
                     </picture>
                     <span className="shoe-name">{shoe.name}</span>
+                    <img src={shoe.gender==='m'?tmale:tfemale} alt="" className="shoe-gender"/>
                 </div>
                 :
                 <div className="shoe-container hover" onClick={toggleCompleteModal} onMouseLeave={handleMouseMovement}>
@@ -39,6 +42,7 @@ const Shoe = ({shoe, handleCart, notify }) => {
                         <img src={shoe.jpeg_img_side} alt={shoe.name}  />
                     </picture>
                     <span className="shoe-name">{shoe.name}</span>
+                    <img src={shoe.gender==='m'?tmale:tfemale} alt="" className="shoe-gender"/>
                 </div>
             }
         </>
