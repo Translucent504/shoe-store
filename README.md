@@ -149,3 +149,5 @@ render(<HoverExample />, document.getElementById("root"));
 - [x] Implement Cart sidebar
 - [x] Implement Gender Filtering
 - [ ] Add the dota shop sound on cart sidebar.
+- [ ] Add a main page / landing page type thing.
+- [ ] Add transition animation from main page to the store grid/page/route
