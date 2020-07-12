@@ -51,7 +51,6 @@ function App() {
 
   const handleShowCart = () => {
     setShowCart(!showCart)
-    console.log("show cart filled")
   }
   
   const handleGender = (btn) => {
