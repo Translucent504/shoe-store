@@ -103,6 +103,12 @@ render(<HoverExample />, document.getElementById("root"));
 
   - To enable fallbacks with next-gen image formats like webP we use `<picture>` elements with multiple `<source>` elements. However this will not render unless there is also an included `<img>` element inside it with a basic src like jpeg etc. This sort of enforces backwards compatibility by simply not allowing us to use picture without an img element since some browsers may not support picture.
 
+  - Css transition is a way to add an interpolation to a css property. its like a watcher that observes a css property and then when it changes, it displays that change as the transition we defined like `transition: transform 1s` will watch the transform property of any css object and if the transform changes then it will change over 1s interpolated by whatever default transition function is there. We used this to make our sidebar smoothly display and hide itself by telling transition to watch the transform property which we change by translateX(200px) and from its standard position.
+
+  - [Good explanation on w3schools](https://www.w3schools.com/css/css_positioning.asp). Css positioning is also pretty nice, we can use fixed,static,relative, absolute and sticky. static is the default and it just goes with normal html flow. relative is also the same as normal but we can assign it different values to offset it from the normal of the static value. Fixed positions the element relative to the viewport and u can read the rest from w3 lol.
+
+  - Add a scroll bar to html elements by simply adding `overflow-y: auto`.
+
 - ## Debugging / quirks
 
   - React Strict Mode causes component double rendering when using hooks.
@@ -112,4 +118,5 @@ render(<HoverExample />, document.getElementById("root"));
 ## TODO Maybe
 
 - Animate the gender stick figures.
-- Implement Cart sidebar
+- [x] Implement Cart sidebar
+- [ ] Add the dota shop sound on cart sidebar.

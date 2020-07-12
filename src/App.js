@@ -15,6 +15,7 @@ const Msg = ({ closeToast, shoe, qty }) => (
 )
 
 function App() {
+  const [showCart, setShowCart] = useState(false)
   const [cart, setCart] = useState([
     "CHILL", "CHILL"
   ])
@@ -47,6 +48,12 @@ function App() {
     }
   }
 
+
+  const handleShowCart = () => {
+    setShowCart(!showCart)
+    console.log("show cart filled")
+  }
+  
   const handleGender = (btn) => {
     if (btn === gender && btn !== 'a') {
       // act like a toggle
@@ -58,9 +65,9 @@ function App() {
   }
   return (
     <div>
-      <Appbar handleGender={handleGender} gender={gender} />
+      <Appbar showCart={showCart} handleShowCart={handleShowCart} handleGender={handleGender} gender={gender} />
       <ToastContainer />
-      <CartSidebar cart={cart} handleCart={handleCart} />
+      <CartSidebar handleShowCart={handleShowCart} showCart={showCart} cart={cart} handleCart={handleCart} />
       <Grid gender={gender} notify={notifyCart} cart={cart} handleCart={handleCart} />
     </div>
   );

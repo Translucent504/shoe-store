@@ -1,0 +1,39 @@
+.sidebar-container {
+    display:'block';
+    height: 90vh;
+    width: 400px;
+    position: fixed!important;
+    right:-400px;
+    z-index: 1;
+    background-color:seashell;
+    transition: transform 1s;
+    overflow-y: auto;
+}
+
+.sidebar-container .sidebar-heading {
+    display:flex;
+    flex-direction: row;
+    padding: 0;
+    font-weight: 550;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    justify-content: space-evenly;
+    transition: transform 1s;
+}
+
+.sidebar-container .sidebar-heading .close {
+    color:red;
+    font-size: 3rem;
+}
+
+.sidebar-container .sidebar-heading:hover {
+    transform: scale(1.2);
+}
+
+
+ul {
+    padding: 0;
+    list-style: none;
+}

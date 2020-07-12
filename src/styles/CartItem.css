@@ -1,0 +1,42 @@
+.grid-container-cart {
+    font-weight: 550;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    display: grid;
+    grid-template-columns: 49% 48%;
+    column-gap: 1.5%;
+    padding: 0;
+    border: solid black;
+}
+
+.grid-container-cart picture img {
+    height:100%;
+    width:100%;
+}
+.flex-container-cart {
+    display:flex;
+    flex-direction: column;
+}
+
+.flex-container-cart .details {
+    font-size: 2em;
+}
+
+.flex-container-cart .qol-cart-buttons {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.flex-container-cart .qol-cart-buttons button {
+    
+    width:50%;
+    font-size: 1em;
+}
+
+.plus {
+    background-color: mediumspringgreen;
+}
+
+.minus {
+    background-color: rgb(209, 18, 18);
+}
