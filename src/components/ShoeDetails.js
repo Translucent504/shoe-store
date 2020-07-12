@@ -17,7 +17,7 @@ const ShoeDetails = ({ shoe, toggle, handleCart, notify }) => {
             <section className="shoe-details">
                 <div className="header-price">
                     <h1>{shoe.name}</h1>
-                    <span>130$</span>
+                    <span>${shoe.price}</span>
                 </div>
                 <div className="cart-buttons">
                     <button onClick={() => setQty(qty + 1 < 0 ? 0 : qty + 1)}>+</button>
