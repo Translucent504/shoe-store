@@ -109,14 +109,41 @@ render(<HoverExample />, document.getElementById("root"));
 
   - Add a scroll bar to html elements by simply adding `overflow-y: auto`.
 
+  - We can add filters on our images with `filter: invert(1)` etc. This lets us play with brightness, saturation, hue-rotation etc.
+
 - ## Debugging / quirks
 
   - React Strict Mode causes component double rendering when using hooks.
 
   - DO NOT PUT COMPONENTS INSIDE STATE. I put a list of components to be rendered by the grid into a list and they had messed up closures. Basically whatever the closure was at the time of adding them to state was what they kept regardless of the state that they depended on changing. This was a problem with the Shoe item inside the grid and when I pressed the add to cart button it always resetted app state to what it was when the Shoe component was added to the list state.
 
+  - **React setState() is asynchronous**. What this means is that if we setState at some point in our component and then a few lines later use that changed state to set another state, it will not work as we expected because what react does is it collects all the setStates and sends them for asynchronous processing at once before the next component render. This is good for performance since if we have multiple setStates that are independent then our component isnt going to keep rerendering after every setstate it encounters. The standard way of dealing with this is to pass a callback to setState so that it sets the dependent state after it has done executing itself. We came across this problem when we added the gender filtering functionality, since we are keeping tracked of how far the user has scrolled down to display infinite pictures through a list state, when we added a gender property we want to filter this list for the appropriate gender values. The thing is that the list only contains the indexes of the shoe array so instead of filtering the list we filter the shoe array, now the problem was that the shoe array was larger than any of our filtered arrays but the list wouldve contained indices that are out of bounds for the filtered array and this would lead to exceptions and errors. This can be fixed by encapsulating the whole component in a try catch and when we get an out of bounds error we simply reset the list to its initial state and let our component rerender. The other option which we implemented was to add a check in the beggining of the component right after we filter the genders,  we check the max value in the list array, if it exceeds the size of any of the filtered male/female arrays then we setState of the list to the initial state and at this point we desire the component to NOT go further and immediately rerender from the beggining but what it was doing was actually passing the setState of the list to async and we were still getting exceptions so we simply added a return statement right after we setState to force the component to stop execution right here and then get rerendered.
+
+- ## Git stuff
+
+  - We can fix conflicts when merging multiple branches directly on github, it has an editor which shows the conflicts marked with conflict markers like:
+
+    ```git
+    <<<<< branch_name
+    content of the branch_name file
+    content of the branch_name file
+    content of the branch_name file
+    content of the branch_name file
+    ==================== separator =========
+    content of the master file
+    content of the master file
+    content of the master file
+    content of the master file
+    >>>>> master
+    ```
+
+  - we can then fix these conflicts by replacing the entire code block by what we would want in its place. which can be like copy pasting parts from the branch_name to the part with content of master file and then deleting the code block containing the branch_name and removing the conflict markers and then we will able to resolve the conflict.
+
+  - Cleaning up the merged branches can be directly done on github when we merge them but on the local copies we can delete those branches from local disk that have also been deleted from remote by doing `git remote prune origin`. deleting local copies of the merged branches can also be done by simply `git branch -d branch_name`. We can first view the merged branches by `git branch --merged`. Note that unmerged branches need a `-D` tag to delete.
+
 ## TODO Maybe
 
-- Animate the gender stick figures.
+- [ ] Animate the gender stick figures.
 - [x] Implement Cart sidebar
+- [x] Implement Gender Filtering
 - [ ] Add the dota shop sound on cart sidebar.
