@@ -6,7 +6,8 @@ const AnimatedMale = ({customStyle}) => {
     const maleAnim = useWebAnimations({
         keyframes: {
             transform: ["scale(0.5)", "scale(2)"],// Go through three colors
-            filter: ["hue-rotate(0deg)","hue-rotate(360deg)"]
+            filter: ["hue-rotate(0deg)","hue-rotate(360deg)"],
+            
         },
         timing: {
             delay: 0, // Start with a 500ms delay
