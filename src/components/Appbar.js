@@ -2,13 +2,13 @@ import React from 'react'
 import '../styles/Appbar.css'
 import female from '../images/female.png'
 import male from '../images/male.jpg'
-
+import {Link} from 'react-router-dom'
 
 const Appbar = ({showCart, handleShowCart, handleGender, gender}) => {
     return (
         <div className="appbar">
             <div className="logo">
-                <h2>ERU</h2>
+                <Link to="/"> <h2>ERU</h2></Link>
                 <a href="https://github.com/Translucent504/shoe-store" target="/blank"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="" /></a>
             </div>
             <div className="genders">
