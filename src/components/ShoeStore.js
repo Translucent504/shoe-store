@@ -20,8 +20,6 @@ function ShoeStore() {
   const [cart, setCart] = useState([])
   const [gender, setGender] = useState('a') // m = male, f = female, a = all
 
-  
-
   const notifyCart = (shoe, qty) => {
     toast(<Msg shoe={shoe} qty={qty} />, {
       position: "top-right",

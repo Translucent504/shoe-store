@@ -121,6 +121,8 @@ render(<HoverExample />, document.getElementById("root"));
   
   - The other option which we implemented was to add a check in the beggining of the component right after we filter the genders,  we check the max value in the list array, if it exceeds the size of any of the filtered male/female arrays then we setState of the list to the initial state and at this point we desire the component to NOT go further and immediately rerender from the beggining but what it was doing was actually passing the setState of the list to async and we were still getting exceptions so we simply added a return statement right after we setState to force the component to stop execution right here and then get rerendered.
 
+  - The useWebAnimation() hook is not capable of working with composite animations yet, what that means is that we can only have one `transform` at a time, if I wanted to scale and translate simulatenously, that is not possible because whatever comes afterwards will overwrite the previous transform.
+
 - ## Git stuff
 
   - We can fix conflicts when merging multiple branches directly on github, it has an editor which shows the conflicts marked with conflict markers like:
@@ -146,10 +148,10 @@ render(<HoverExample />, document.getElementById("root"));
 ## TODO Maybe
 
 - [ ] Animate the gender stick figures.
-- [ ] Add gender icons to main shoe image on grid.(maybe top right of image, position:absolute)
+- [x] Add gender icons to main shoe image on grid.(maybe top right of image, position:absolute)
 - [x] Implement Cart sidebar
-- [ ] Compute and show Total in cart sidebar
+- [x] Compute and show Total in cart sidebar
 - [x] Implement Gender Filtering
 - [ ] Add the dota shop sound on cart sidebar.
-- [ ] Add a main page / landing page type thing.
+- [x] Add a main page / landing page type thing.
 - [ ] Add transition animation from main page to the store grid/page/route

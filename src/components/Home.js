@@ -27,14 +27,14 @@ const bgStyle = {
 const Home = () => {
     return (
         <div style={bgStyle} >
-            <Link to="/shoestore" >
-                <AnimatedMale customStyle={buttonStyle} />
-            </Link>
             <audio autoPlay
                 src={heaven}>
                 Your browser does not support the
             <code>audio</code> element.
-    </audio>
+            </audio>
+            <Link to="/shoestore" >
+                <AnimatedMale customStyle={buttonStyle} />
+            </Link>
         </div>
     )
 }
