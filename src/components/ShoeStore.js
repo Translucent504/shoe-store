@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Appbar from './Appbar'
 import Grid from './Grid'
-import Video from './Video'
 import CartSidebar from './CartSidebar'
 import { ToastContainer, toast } from "react-toastify";
 
