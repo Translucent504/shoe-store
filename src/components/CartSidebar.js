@@ -14,7 +14,7 @@ const CartSidebar = ({ handleShowCart, showCart, cart, handleCart }) => {
                 {unique.map(c => <CartItem className="cart-item" key={c} item={c} cart={cart} handleCart={handleCart} />)}
             </ul>
             <div className="total">
-                total:2000$
+                total:$$$$
         </div>
         </div>
     )
