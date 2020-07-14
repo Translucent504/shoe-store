@@ -1,5 +1,7 @@
-# Mockup
+# Link to deployed site
+[Surge](http://eru-shoestore.surge.sh/shoestore)
 
+# Mockup
 ![mockup](mockup.png)
 
 - ## Inspirations
