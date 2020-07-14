@@ -1,6 +1,5 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import useWebAnimations from "@wellyshen/use-web-animations";
 import AnimatedMale from './AnimatedMale'
 import bground from '../images/ray3.svg'
 import '../styles/Home.css'
