@@ -32,6 +32,15 @@
     transform: scale(1.2);
 }
 
+.sidebar-container .total {
+    font-weight: 550;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: dashed overline;
+    letter-spacing: 0.3rem;
+}
 
 ul {
     padding: 0;

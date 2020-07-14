@@ -1,6 +1,8 @@
 import React from 'react'
 import CartItem from './CartItem'
 import '../styles/CartSidebar.css'
+import shoes from '../utils/ImageBunch'
+var _ = require('lodash')
 
 const CartSidebar = ({ handleShowCart, showCart, cart, handleCart }) => {
     const unique = [...new Set(cart)]
@@ -14,8 +16,8 @@ const CartSidebar = ({ handleShowCart, showCart, cart, handleCart }) => {
                 {unique.map(c => <CartItem className="cart-item" key={c} item={c} cart={cart} handleCart={handleCart} />)}
             </ul>
             <div className="total">
-                total:$$$$
-        </div>
+                <h1>total: ${_.sum(cart.map(c => _.find(shoes, ['name', c]).price))}</h1>
+            </div>
         </div>
     )
 }
